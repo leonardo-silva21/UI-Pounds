@@ -1,0 +1,65 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilos para o botão de menu */
+.menu-btn {
+    display: none;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilos para a navegação lateral */
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #111;
+    transition: all 0.3s ease-in;
+}
+
+.nav a {
+    color: #fff;
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease-in;
+}
+
+.nav a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Estilos para o menu aberto */
+.menu-btn:checked ~ .nav {
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+     .nav {
+         left: -100%;
+         transition: all 0.3s ease-in;
+     }
+
+    .menu-btn:checked ~ .nav {
+        left: 0;
+    }
+}

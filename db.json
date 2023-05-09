@@ -1,0 +1,46 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Leonardo",
+      "cpf": 129548123,
+      "email": "Leo@leo",
+      "password": "12365491"
+    },
+    {
+      "name": "Leonardo Cardoso",
+      "email": "leo@leo.com",
+      "password": "Teste123",
+      "cpf": 216123111201,
+      "id": 2
+    },
+    {
+      "name": "Teste",
+      "email": "teste@teste",
+      "password": "aaaaaaaaaaa",
+      "cpf": 111111111111111,
+      "id": 3
+    },
+    {
+      "name": "Teste",
+      "email": "teste@teste",
+      "password": "senha",
+      "cpf": 484848,
+      "id": 4
+    },
+    {
+      "name": "aaaaaaaaaaa",
+      "email": "aaaaaaaaaaa",
+      "password": "aaaaaaaaaaaaaa",
+      "cpf": 4444,
+      "id": 5
+    },
+    {
+      "name": "teste5",
+      "email": "yyyyyyyyyyyyyyy",
+      "password": "111111111111",
+      "cpf": 123456789,
+      "id": 6
+    }
+  ]
+}
