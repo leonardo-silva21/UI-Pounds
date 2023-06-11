@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Subscription } from 'rxjs';
-import { UserService } from 'src/app/core/services/user.service';
-import { User } from 'src/app/models/user.model';
+import { Subscription, catchError, throwError } from 'rxjs';
+import { UserService } from 'src/app/core/services/user/user.service';
+import { User } from 'src/app/models/user.model'
 
 @Component({
   selector: 'app-sign-up',
@@ -10,7 +10,7 @@ import { User } from 'src/app/models/user.model';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
-
+  message!: string;
   newUserSubscription = new Subscription();
 
   userForm!: FormGroup;
@@ -21,19 +21,36 @@ export class SignUpComponent implements OnInit {
     this.setupForm();
   }
 
-  setupForm(){
-    this.userForm = this.fb.group({
-      name: ['', [Validators.required]],
-      email: ['',[ Validators.required]],
-      password: ['',[ Validators.required]],
-      cpf: ''
-    } as const)
+  ngOnDestroy(): void {
+    this.newUserSubscription.unsubscribe();
   }
 
-  onSubmit(): void{
-    this.newUserSubscription = this.service.addUser(this.userForm.value as User).subscribe()
-    this.userForm
-    this.userForm.reset();
+  setupForm(){
+    this.userForm = this.fb.group({
+      nomeCompleto: ['', [Validators.required]],
+      email: ['',[ Validators.required, Validators.email]],
+      senha: ['',[ Validators.required, Validators.minLength(6)]],
+      cpf: ['', [Validators.required, Validators.maxLength(12)]]
+    })
+  }
+
+  onSubmit() {
+    if (this.userForm.valid) {
+      const user: User = this.userForm.value;
+      this.service.addUser(user).subscribe(
+        (createdUser: User) => {
+          this.userForm.reset();
+          this.message = 'Usuário criado com sucesso!';
+          setTimeout(() => {
+            this.message = '';
+          }, 5000);
+        },
+        (error: any) => {
+          console.error(error);
+          this.message = 'Ocorreu um erro ao criar o usuário.';
+        }
+      );
+    }
   }
 
 }
