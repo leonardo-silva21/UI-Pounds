@@ -53,3 +53,11 @@
   .cadastre-form button[type="submit"]:hover {
     background-color: #3e8e41;
   }
+
+  .success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }

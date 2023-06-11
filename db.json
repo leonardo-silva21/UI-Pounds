@@ -1,46 +1,19 @@
 {
-  "user": [
+  "tarefas": [
     {
-      "id": 1,
-      "name": "Leonardo",
-      "cpf": 129548123,
-      "email": "Leo@leo",
-      "password": "12365491"
+      "nome": "Módulo 1",
+      "descricao": "Introdução à Língua Brasileira de Sinais (Libras) com foco no alfabeto manual, vocabulário básico, expressões faciais e gestos. Exploração da cultura surda e princípios de inclusão. Capacitação para iniciar conversas simples em Libras.",
+      "link": "linklink"
     },
     {
-      "name": "Leonardo Cardoso",
-      "email": "leo@leo.com",
-      "password": "Teste123",
-      "cpf": 216123111201,
-      "id": 2
+      "nome": "Módulo 2",
+      "descricao": "Aprofundamento das habilidades em Libras com ênfase em estruturas gramaticais, vocabulário ampliado e expressões idiomáticas. Desenvolvimento de narrativas, diálogos e descrições de situações cotidianas. Compreensão aprofundada da cultura e sociedade surda.",
+      "link": "linklink"
     },
     {
-      "name": "Teste",
-      "email": "teste@teste",
-      "password": "aaaaaaaaaaa",
-      "cpf": 111111111111111,
-      "id": 3
-    },
-    {
-      "name": "Teste",
-      "email": "teste@teste",
-      "password": "senha",
-      "cpf": 484848,
-      "id": 4
-    },
-    {
-      "name": "aaaaaaaaaaa",
-      "email": "aaaaaaaaaaa",
-      "password": "aaaaaaaaaaaaaa",
-      "cpf": 4444,
-      "id": 5
-    },
-    {
-      "name": "teste5",
-      "email": "yyyyyyyyyyyyyyy",
-      "password": "111111111111",
-      "cpf": 123456789,
-      "id": 6
+      "nome": "Módulo 3",
+      "descricao": "Consolidação das habilidades linguísticas e culturais em Libras. Exploração de tópicos complexos, como debates, interpretação de textos e produção de sinais elaborados. Ênfase na fluência, compreensão e expressão criativa em Libras, incluindo vocabulário técnico e narrativa literária.",
+      "link": "linklink"
     }
   ]
 }

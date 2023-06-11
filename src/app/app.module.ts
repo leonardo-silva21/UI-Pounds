@@ -8,7 +8,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SignInComponent } from './modules/home/sign-in/sign-in.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SignUpComponent } from './modules/home/sign-up/sign-up.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    RouterModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
